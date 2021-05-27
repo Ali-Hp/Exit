@@ -1,0 +1,92 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Cairo', sans-serif;
+        list-style: none;
+        scroll-behavior: smooth;
+    }
+    
+    .div {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #202225;
+    }
+    
+    .div span {
+        display: inline-block;
+        width: 50px;
+        height: 45px;
+        background-color: #0984e3;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .div span:before {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        content: '';
+        width: 40px;
+        height: 3px;
+        background-color: #f9f9f9;
+    }
+    
+    .div span:after {
+        position: absolute;
+        top: 20px;
+        left: 5px;
+        content: '';
+        width: 40px;
+        height: 3px;
+        background-color: #f9f9f9;
+        box-shadow: 0 10px 0 #f9f9f9;
+        transition: .1s linear;
+        -webkit-transition: .1s linear;
+        -moz-transition: .1s linear;
+        -ms-transition: .1s linear;
+        -o-transition: .1s linear;
+    }
+    
+    .div span.open:after {
+        transform: rotate(50deg);
+        -webkit-transform: rotate(50deg);
+        -moz-transform: rotate(50deg);
+        -ms-transform: rotate(50deg);
+        -o-transform: rotate(50deg);
+        box-shadow: none;
+        transition: .1s linear;
+        -webkit-transition: .1s linear;
+        -moz-transition: .1s linear;
+        -ms-transition: .1s linear;
+        -o-transition: .1s linear;
+        background-color: #f9f9f9;
+    }
+    
+    .div span.open:before {
+        transform: rotate(-50deg);
+        -webkit-transform: rotate(-50deg);
+        -moz-transform: rotate(-50deg);
+        -ms-transform: rotate(-50deg);
+        -o-transform: rotate(-50deg);
+        top: 20px;
+        left: 5px;
+        transition: .1s linear;
+        -webkit-transition: .1s linear;
+        -moz-transition: .1s linear;
+        -ms-transition: .1s linear;
+        -o-transition: .1s linear;
+        background-color: #f9f9f9;
+    }
+    
+    .div span.open {
+        background-color: #d63031;
+        transition: .1s linear;
+        -webkit-transition: .1s linear;
+        -moz-transition: .1s linear;
+        -ms-transition: .1s linear;
+        -o-transition: .1s linear;
+    }
